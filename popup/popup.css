@@ -1,0 +1,130 @@
+/* Global reset / consistency */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #2b2d42;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Card */
+.counter-card {
+  background-color: #363849;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  width: 320px;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  padding: 2rem 0;
+  border-bottom: 1px solid #45475a;
+}
+
+.header h1 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+/* Counter */
+.counter-display {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.counter-display #count {
+  color: #4ecdc4;
+  font-size: 4.5rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* Controls */
+.controls {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-top: 1px solid #45475a;
+}
+
+.control-btn {
+  padding: 2rem 0;
+  background-color: #363849;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.control-btn:hover {
+  background-color: #3d3f52;
+}
+
+.control-btn:focus-visible {
+  outline: 2px solid #4ecdc4;
+  outline-offset: -2px;
+}
+
+/* Icon circle */
+.control-btn span {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  border: 2px solid #6c6f8a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6c6f8a;
+  font-size: 1.5rem;
+  transition:
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.control-btn:hover span {
+  border-color: #4ecdc4;
+  color: #4ecdc4;
+}
+
+/* Reset button */
+.reset-container {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.reset-btn {
+  background-color: #4ecdc4;
+  color: #ffffff;
+  font-weight: 500;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    transform 0.1s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.reset-btn:hover {
+  background-color: #45b8b0;
+}
+
+.reset-btn:active {
+  transform: translateY(1px);
+}

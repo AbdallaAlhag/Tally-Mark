@@ -10,7 +10,21 @@
     "128": "images/icon-128.png"
   },
   "action": {
-    "default_popup": "popup/popup.html"
+    "default_popup": "popup/popup.html",
+    "default_icon": "images/icon-128.png",
+    "default_title": "tally-Mark"
   },
-  "permissions": ["storage"]
+  "permissions": ["storage"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "commands": {
+    "open-popup": {
+      "suggested_key": {
+        "default": "Alt+Shift+T",
+        "mac": "Alt+Shift+T"
+      },
+      "description": "Open the Tally-Mark popup"
+    }
+  }
 }
